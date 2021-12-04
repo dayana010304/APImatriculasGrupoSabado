@@ -19,31 +19,13 @@
 
     // vamos a crear las variables para enviar los datos de los campos de la tabla de la siguiente manera:
     $id = $obj['id'];
-    $nif = $obj['nif'];
-    $nombre = $obj['nombre'];
-    $apellido1 = $obj['apellido1'];
-    $apellido2 = $obj['apellido2'];
-    $ciudad = $obj['ciudad'];
-    $clave= $obj['clave'];
-    $direccion= $obj['direccion'];
-    $fecha_nacimiento= $obj['fecha_nacimmiento'];
-    $sexo= $obj['sexo'];
-    $telefono= $obj['telefono'];
-    $tipo= $obj['tipo'];
-
+    $ano_inicio = $obj['ano_inicio'];
+    $ano_fin = $obj['ano_fin'];
+    
     // Ahora agregamos la instruccion para Actualizar
-    $sql_query = "UPDATE persona SET
-    nif = '$nif', 
-    nombre = '$nombre', 
-    apellido1 = '$apellido1', 
-    apellido2 = '$apellido2', 
-    ciudad = '$ciudad', 
-    clave = '$clave', 
-    direccion = '$direccion', 
-    fecha_nacimiento = '$fecha_nacimiento', 
-    sexo = '$sexo', 
-    telefono = '$telefono', 
-    tipo = '$tipo' 
+    $sql_query = "UPDATE curso_escolar SET
+    ano_inicio = '$ano_inicio', 
+    ano_fin = '$ano_fin', 
     WHERE id = $id";
 
     //Ahora vamosa a Ejecutar la instruccion SQL anterior

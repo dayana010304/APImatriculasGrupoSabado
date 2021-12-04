@@ -9,10 +9,9 @@ header('Access-Control-Max-Age:1000');
 header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token, Authorization');
 
 // Ahora vamos a crear el metodo CONSULTAR para listar todos los registros
-
-include '../Conexion/parametrosDB.php';
+include '../conexion/ParametrosDB.php';
 // Abrimos la conexion
-$conn= new mysqli($HostName,$HostUser,$HostPass,$dataBaseName);
+$conn= new mysqli($HostName,$HostUser,$HostPass, $DataBaseName);
 //ahora validamos la conexion
 if ($conn -> connect_error)
 {
@@ -21,13 +20,13 @@ if ($conn -> connect_error)
 else
 {
     // ahora vamos a construir la consulta.
-    $sql = "SELECT * FROM asignatura"; // Preparar la consulta
-    $result = $conn -> query($sql);   // ejecutar la consulta
+    $sql = "SELECT * FROM grado"; // Preparar la consulta
+    $result = $conn->query($sql);   // ejecutar la consulta
     // verificar si devuelve  datos o no.
-    if ($result -> num_rows > 0)
+    if ($result->num_rows > 0)
     {
         // Con los registtross encontrados los llevamos a un arreglo a un vector
-        while ($row[] = $result->fetch_assoc())
+        while($row[] = $result->fetch_assoc())
         {
             $item = $row;
             // Ahora vamos a convertir el dato a Json

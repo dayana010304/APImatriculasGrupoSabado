@@ -19,31 +19,23 @@
 
     // vamos a crear las variables para enviar los datos de los campos de la tabla de la siguiente manera:
     $id = $obj['id'];
-    $nif = $obj['nif'];
     $nombre = $obj['nombre'];
-    $apellido1 = $obj['apellido1'];
-    $apellido2 = $obj['apellido2'];
-    $ciudad = $obj['ciudad'];
-    $clave= $obj['clave'];
-    $direccion= $obj['direccion'];
-    $fecha_nacimiento= $obj['fecha_nacimmiento'];
-    $sexo= $obj['sexo'];
-    $telefono= $obj['telefono'];
-    $tipo= $obj['tipo'];
+    $creditos = $obj['creditos'];
+    $tipo = $obj['tipo'];  
+    $curso = $obj['curso'];
+    $cuatrimestre = $obj['cuatrimestre'];
+    $id_profesor = $obj['id_profesor'];
+    $id_grado = $obj['id_grado'];
 
     // Ahora agregamos la instruccion para Actualizar
-    $sql_query = "UPDATE persona SET
-    nif = '$nif', 
+    $sql_query = "UPDATE asignatura SET
     nombre = '$nombre', 
-    apellido1 = '$apellido1', 
-    apellido2 = '$apellido2', 
-    ciudad = '$ciudad', 
-    clave = '$clave', 
-    direccion = '$direccion', 
-    fecha_nacimiento = '$fecha_nacimiento', 
-    sexo = '$sexo', 
-    telefono = '$telefono', 
-    tipo = '$tipo' 
+    creditos = '$creditos', 
+    tipo = '$tipo', 
+    curso = '$curso', 
+    cuatrimestre = '$cuatrimestre', 
+    id_profesor = '$id_profesor', 
+    id_grado = '$id_grado', 
     WHERE id = $id";
 
     //Ahora vamosa a Ejecutar la instruccion SQL anterior

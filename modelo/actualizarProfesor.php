@@ -18,33 +18,13 @@
     $obj = json_decode($json, true);
 
     // vamos a crear las variables para enviar los datos de los campos de la tabla de la siguiente manera:
-    $id = $obj['id'];
-    $nif = $obj['nif'];
-    $nombre = $obj['nombre'];
-    $apellido1 = $obj['apellido1'];
-    $apellido2 = $obj['apellido2'];
-    $ciudad = $obj['ciudad'];
-    $clave= $obj['clave'];
-    $direccion= $obj['direccion'];
-    $fecha_nacimiento= $obj['fecha_nacimmiento'];
-    $sexo= $obj['sexo'];
-    $telefono= $obj['telefono'];
-    $tipo= $obj['tipo'];
-
+    $id_profesor = $obj['id_$id_profesor'];
+    $id_departamento = $obj['id_departamento'];
+    
     // Ahora agregamos la instruccion para Actualizar
-    $sql_query = "UPDATE persona SET
-    nif = '$nif', 
-    nombre = '$nombre', 
-    apellido1 = '$apellido1', 
-    apellido2 = '$apellido2', 
-    ciudad = '$ciudad', 
-    clave = '$clave', 
-    direccion = '$direccion', 
-    fecha_nacimiento = '$fecha_nacimiento', 
-    sexo = '$sexo', 
-    telefono = '$telefono', 
-    tipo = '$tipo' 
-    WHERE id = $id";
+    $sql_query = "UPDATE profesor SET
+    id_departamento = '$id_departamento'
+    WHERE id_profesor = $id_profesor";
 
     //Ahora vamosa a Ejecutar la instruccion SQL anterior
     if(mysqli_query($conn, $sql_query))

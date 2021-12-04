@@ -25,27 +25,10 @@
     //tabla de la siguiente manera:
 
     $id = $obj['id'];
-    $nif = $obj['nif'];
     $nombre = $obj['nombre'];
-    $apellido1 = $obj['apellido1'];
-    $apellido2 = $obj['apellido2'];   
-    $ciudad = $obj['ciudad']; 
-    $clave = $obj['Clave']; 
-    $direccion = $obj['direccion']; 
-    $fecha_nacimiento = $obj['fecha_nacimiento']; 
-    $sexo = $obj['sexo'];
-    $telefono = $obj['telefono'];
-    $tipo = $obj['tipo'];  
- 
 
      //Ahora agreguemos la instrucción SQL para insertar
-    $sql_query = "insert into persona(
-                nif, nombre, apellido1, apellido2, ciudad, 
-                Clave,  direccion, fecha_nacimiento, sexo, telefono, tipo)
-          values('$nif', '$nombre', '$apellido1', '$apellido2', 
-                '$ciudad', '$clave', '$direccion', '$fecha_nacimiento',
-                '$sexo', '$telefono', '$tipo')      
-    ";
+    $sql_query = "insert into departamento (nombre) values('$nombre')";
     //Ahora vamos a ejecutar la instrucción SQL anterior
     if(mysqli_query($conn,$sql_query))
     {
